@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #050d0a;
+  --bg-2: #07140f;
+  --surface: #0c1a14;
+  --surface-2: #10211a;
+  --border: #1c3d32;
+  --green: #00dd94;
+  --green-2: #00b67a;
+  --green-dim: #014737;
+  --red: #ff5a7a;
+  --text: #e8f5ef;
+  --muted: #8aa89a;
+  --muted-2: #5c7a6c;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg2: var(--bg-2);
+  --color-surface: var(--surface);
+  --color-surface2: var(--surface-2);
+  --color-line: var(--border);
+  --color-green: var(--green);
+  --color-green2: var(--green-2);
+  --color-greendim: var(--green-dim);
+  --color-red: var(--red);
+  --color-ink: var(--text);
+  --color-mute: var(--muted);
+  --color-mute2: var(--muted-2);
+  --font-sans: var(--font-geist-sans);
+  --font-display: var(--font-syne);
+  --font-mono: var(--font-geist-mono);
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-geist-sans), Inter, system-ui, sans-serif;
+  background-image:
+    radial-gradient(1200px 500px at 80% -10%, rgba(0, 221, 148, 0.12), transparent 55%),
+    radial-gradient(900px 420px at -10% 20%, rgba(1, 71, 55, 0.45), transparent 50%);
+}
+
+.font-display {
+  font-family: var(--font-syne), var(--font-geist-sans), sans-serif;
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(0, 221, 148, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 221, 148, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 85%);
+}
+
+.glow-ring {
+  box-shadow:
+    0 0 0 1px rgba(0, 221, 148, 0.18),
+    0 0 40px rgba(0, 221, 148, 0.08);
+}
+
+.depth-bar {
+  background: linear-gradient(90deg, rgba(0, 221, 148, 0.16), rgba(0, 221, 148, 0.02));
+}
+
+.depth-bar-no {
+  background: linear-gradient(270deg, rgba(255, 90, 122, 0.16), rgba(255, 90, 122, 0.02));
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c3d32;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
